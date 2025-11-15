@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflective Personal Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --text: #2c3e50;
+            --header-bg: #f8f9fa;
+            --border: #e1e4e8;
+            --btn-bg: #2c3e50;
+            --btn-text: #ffffff;
+        }
+
+        .dark-mode {
+            --bg: #0d1117;
+            --text: #c9d1d9;
+            --header-bg: #161b22;
+            --border: #30363d;
+            --btn-bg: #58a6ff;
+            --btn-text: #0d1117;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 30px 20px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .toggle-btn {
+            padding: 10px 12px;
+            cursor: pointer;
+            border: none;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+        }
+
+        .toggle-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .toggle-btn:active {
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 40px 60px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 50px 0 20px;
+            text-align: center;
+            color: var(--text);
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 24px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+            margin-bottom: 40px;
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .intro-note {
+            background-color: var(--header-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--btn-bg);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            background-color: var(--header-bg);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+                width: 100%;
+            }
+
+            .container {
+                padding: 0 20px 40px;
+                margin: 40px auto;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reflective Personal Documentation</h1>
+            <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                <span id="theme-icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Reflective Personal Documentation on a Self-Conducted Behavioral Experiment</h2>
+            <div class="intro-note">
+                <p><strong>Note:</strong> This document was originally written by me and enhanced with the assistance of AI. If scanned using AI-detection tools, it may reflect AI-supported refinement.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <p>My name is Dinno Guerba, a fourth-year Bachelor of Science in Information Technology (BSIT) student. The purpose of this document is to formally recount and analyze a personal experiential activity I conducted out of curiosity regarding human social behavior, particularly in contexts where alcohol consumption is involved.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. Initial Engagement and Baseline State</h2>
+            <p>Between 9:00 PM and 10:00 PM, my classmates and I were still working on our academic projects. During this period, I was fully conscious, alert, and cognitively functioning at a normal baseline level. I maintained complete control over my actions, words, and decision-making processes. There was no impairment in judgment, emotional regulation, or physical coordination at this stage.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Onset of Mild Dizziness</h2>
+            <p>At approximately 11:00 PM, I began experiencing mild dizziness—a common physiological response to alcohol consumption. Despite this sensation, I remained fully aware of my surroundings, able to communicate coherently, and capable of making deliberate choices. Importantly, I did not experience any loss of emotional control, impulsive behavior, or reduction in my ability to assess situations rationally. My consciousness remained intact, and I continued to interact with my peers in a measured and considerate manner.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Maintained Consciousness and Situational Awareness</h2>
+            <p>It is commonly stated that intoxication leads to diminished emotional control, impaired judgment, and socially inappropriate behavior. However, throughout my observation period, I noted that I did not exhibit any of these characteristics. I did not become aggressive, overly emotional, or lose my sense of propriety. I remained respectful in my interactions, maintained awareness of social boundaries, and did not engage in reckless or harmful actions. This contradicted the notion that alcohol inherently causes a complete loss of self-regulation.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Continued Consciousness Despite Increasing Fatigue</h2>
+            <p>Between 1:00 AM and 2:00 AM, the general condition remained similar to the previous hours. While dizziness persisted and physical fatigue began to accumulate, my cognitive faculties remained largely intact. I was still able to follow conversations, respond appropriately, and make conscious decisions about my behavior. There was no descent into unconsciousness or incoherence at this stage. The experience was uncomfortable but manageable, and I remained in control of my mental state.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Heavy Dizziness and Physical Decline</h2>
+            <p>Between 2:00 AM and 4:00 AM, I reached a point where my physical capacity noticeably declined. The dizziness intensified, and I experienced significant fatigue. My body felt weaker, and maintaining an upright posture became more difficult. However, even at this stage, I did not lose consciousness entirely. I was aware of my condition, recognized the need to rest, and understood that my body was signaling overexertion. Despite the discomfort, I remained mentally present and did not engage in dangerous or irresponsible behavior.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Vomiting and Final Stage of the Experience</h2>
+            <p>Around 4:40 AM, my body could no longer tolerate the intake. I experienced vomiting—a natural physiological response to expel excess substances. This marked the conclusion of the active phase of the experiment. After this point, I allowed myself to rest and recover. Upon waking later, I reflected on the entire experience with clarity, as my memory of the events remained intact.</p>
+        </div>
+
+        <div class="section">
+            <h2>Reflective Conclusion</h2>
+            <p>Following this experience, I asked myself why such activities are socially normalized, particularly in academic and professional settings. Many individuals engage in drinking as a form of socialization, stress relief, or bonding. However, I found that the physical discomfort, loss of productivity, and potential health risks did not align with my personal values or long-term goals. I concluded that while I could maintain control and awareness during intoxication, the overall experience was not beneficial to my well-being or academic pursuits. This experiment reinforced my preference for alternative forms of social engagement that do not compromise my physical health or mental clarity.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; All rights reserved Dinno Guerba</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            icon.textContent = document.body.classList.contains('dark-mode') 
+                ? '🌙' 
+                : '☀️';
+        }
+
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html>
