@@ -4,69 +4,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reflective Personal Documentation</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Motion -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <div class="mesh-gradient"></div>
+    
     <header>
-        <div class="header-content">
-            <h1>Reflective Personal Documentation</h1>
+        <nav class="header-content">
+            <a href="#view-hero" class="logo">
+                <i data-lucide="book-open-check"></i>
+                <span>Reflective Docs</span>
+            </a>
             <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-                <span id="theme-icon">☀️</span>
+                <i id="theme-icon" data-lucide="sun"></i>
             </button>
-        </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Reflective Personal Documentation on a Self-Conducted Behavioral Experiment</h2>
-            <div class="intro-note">
-                <p><strong>Note:</strong> This document was originally written by me and enhanced with the assistance of AI. If scanned using AI-detection tools, it may reflect AI-supported refinement.</p>
+    <main class="scroll-container">
+        <!-- Section 0: Hero -->
+        <section id="view-hero" class="view-section">
+            <div class="content-wrapper hero-content">
+                <div class="hero-text">
+                    <span class="badge">Behavioral Experiment</span>
+                    <h1>Reflective Personal Documentation</h1>
+                    <p class="subtitle">A self-conducted behavioral experiment on human social behavior and self-regulation.</p>
+                </div>
+                <div class="intro-note">
+                    <i data-lucide="info"></i>
+                    <p><strong>Note:</strong> This document was originally written by Dinno Guerba and enhanced with AI support. It recounts an experiential activity regarding alcohol consumption and cognitive awareness.</p>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <i data-lucide="chevron-down"></i>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <p>My name is Dinno Guerba, a fourth-year Bachelor of Science in Information Technology (BSIT) student. The purpose of this document is to formally recount and analyze a personal experiential activity I conducted out of curiosity regarding human social behavior, particularly in contexts where alcohol consumption is involved.</p>
-        </div>
+        <!-- Section 1: Introduction -->
+        <section id="intro" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">01</span>
+                    <div class="line"></div>
+                </div>
+                <h2>Introduction</h2>
+                <div class="content-body">
+                    <p>My name is Dinno Guerba, a fourth-year Bachelor of Science in Information Technology (BSIT) student. The purpose of this document is to formally recount and analyze a personal experiential activity I conducted out of curiosity regarding human social behavior, particularly in contexts where alcohol consumption is involved.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>1. Initial Engagement and Baseline State</h2>
-            <p>Between 9:00 PM and 10:00 PM, my classmates and I were still working on our academic projects. During this period, I was fully conscious, alert, and cognitively functioning at a normal baseline level. I maintained complete control over my actions, words, and decision-making processes. There was no impairment in judgment, emotional regulation, or physical coordination at this stage.</p>
-        </div>
+        <!-- Section 2: Initial Engagement -->
+        <section id="baseline" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">02</span>
+                    <div class="line"></div>
+                </div>
+                <h2>1. Initial Engagement and Baseline State</h2>
+                <div class="content-body">
+                    <p>Between 9:00 PM and 10:00 PM, my classmates and I were still working on our academic projects. During this period, I was fully conscious, alert, and cognitively functioning at a normal baseline level. I maintained complete control over my actions, words, and decision-making processes. There was no impairment in judgment, emotional regulation, or physical coordination at this stage.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>2. Onset of Mild Dizziness</h2>
-            <p>At approximately 11:00 PM, I began experiencing mild dizziness—a common physiological response to alcohol consumption. Despite this sensation, I remained fully aware of my surroundings, able to communicate coherently, and capable of making deliberate choices. Importantly, I did not experience any loss of emotional control, impulsive behavior, or reduction in my ability to assess situations rationally. My consciousness remained intact, and I continued to interact with my peers in a measured and considerate manner.</p>
-        </div>
+        <!-- Section 3: Onset of Mild Dizziness -->
+        <section id="onset" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">03</span>
+                    <div class="line"></div>
+                </div>
+                <h2>2. Onset of Mild Dizziness</h2>
+                <div class="content-body">
+                    <p>At approximately 11:00 PM, I began experiencing mild dizziness—a common physiological response to alcohol consumption. Despite this sensation, I remained fully aware of my surroundings, able to communicate coherently, and capable of making deliberate choices. Importantly, I did not experience any loss of emotional control, impulsive behavior, or reduction in my ability to assess situations rationally. My consciousness remained intact, and I continued to interact with my peers in a measured and considerate manner.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>3. Maintained Consciousness and Situational Awareness</h2>
-            <p>It is commonly stated that intoxication leads to diminished emotional control, impaired judgment, and socially inappropriate behavior. However, throughout my observation period, I noted that I did not exhibit any of these characteristics. I did not become aggressive, overly emotional, or lose my sense of propriety. I remained respectful in my interactions, maintained awareness of social boundaries, and did not engage in reckless or harmful actions. This contradicted the notion that alcohol inherently causes a complete loss of self-regulation.</p>
-        </div>
+        <!-- Section 4: Situational Awareness -->
+        <section id="awareness" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">04</span>
+                    <div class="line"></div>
+                </div>
+                <h2>3. Maintained Consciousness and Situational Awareness</h2>
+                <div class="content-body">
+                    <p>It is commonly stated that intoxication leads to diminished emotional control, impaired judgment, and socially inappropriate behavior. However, throughout my observation period, I noted that I did not exhibit any of these characteristics. I did not become aggressive, overly emotional, or lose my sense of propriety. I remained respectful in my interactions, maintained awareness of social boundaries, and did not engage in reckless or harmful actions. This contradicted the notion that alcohol inherently causes a complete loss of self-regulation.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>4. Continued Consciousness Despite Increasing Fatigue</h2>
-            <p>Between 1:00 AM and 2:00 AM, the general condition remained similar to the previous hours. While dizziness persisted and physical fatigue began to accumulate, my cognitive faculties remained largely intact. I was still able to follow conversations, respond appropriately, and make conscious decisions about my behavior. There was no descent into unconsciousness or incoherence at this stage. The experience was uncomfortable but manageable, and I remained in control of my mental state.</p>
-        </div>
+        <!-- Section 5: Increasing Fatigue -->
+        <section id="fatigue" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">05</span>
+                    <div class="line"></div>
+                </div>
+                <h2>4. Continued Consciousness Despite Increasing Fatigue</h2>
+                <div class="content-body">
+                    <p>Between 1:00 AM and 2:00 AM, the general condition remained similar to the previous hours. While dizziness persisted and physical fatigue began to accumulate, my cognitive faculties remained largely intact. I was still able to follow conversations, respond appropriately, and make conscious decisions about my behavior. There was no descent into unconsciousness or incoherence at this stage. The experience was uncomfortable but manageable, and I remained in control of my mental state.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>5. Heavy Dizziness and Physical Decline</h2>
-            <p>Between 2:00 AM and 4:00 AM, I reached a point where my physical capacity noticeably declined. The dizziness intensified, and I experienced significant fatigue. My body felt weaker, and maintaining an upright posture became more difficult. However, even at this stage, I did not lose consciousness entirely. I was aware of my condition, recognized the need to rest, and understood that my body was signaling overexertion. Despite the discomfort, I remained mentally present and did not engage in dangerous or irresponsible behavior.</p>
-        </div>
+        <!-- Section 6: Physical Decline -->
+        <section id="decline" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">06</span>
+                    <div class="line"></div>
+                </div>
+                <h2>5. Heavy Dizziness and Physical Decline</h2>
+                <div class="content-body">
+                    <p>Between 2:00 AM and 4:00 AM, I reached a point where my physical capacity noticeably declined. The dizziness intensified, and I experienced significant fatigue. My body felt weaker, and maintaining an upright posture became more difficult. However, even at this stage, I did not lose consciousness entirely. I was aware of my condition, recognized the need to rest, and understood that my body was signaling overexertion. Despite the discomfort, I remained mentally present and did not engage in dangerous or irresponsible behavior.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>6. Vomiting and Final Stage of the Experience</h2>
-            <p>Around 4:40 AM, my body could no longer tolerate the intake. I experienced vomiting—a natural physiological response to expel excess substances. This marked the conclusion of the active phase of the experiment. After this point, I allowed myself to rest and recover. Upon waking later, I reflected on the entire experience with clarity, as my memory of the events remained intact.</p>
-        </div>
+        <!-- Section 7: The Final Stage -->
+        <section id="final" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">07</span>
+                    <div class="line"></div>
+                </div>
+                <h2>6. Vomiting and Final Stage of the Experience</h2>
+                <div class="content-body">
+                    <p>Around 4:40 AM, my body could no longer tolerate the intake. I experienced vomiting—a natural physiological response to expel excess substances. This marked the conclusion of the active phase of the experiment. After this point, I allowed myself to rest and recover. Upon waking later, I reflected on the entire experience with clarity, as my memory of the events remained intact.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <h2>Reflective Conclusion</h2>
-            <p>Following this experience, I asked myself why such activities are socially normalized, particularly in academic and professional settings. Many individuals engage in drinking as a form of socialization, stress relief, or bonding. However, I found that the physical discomfort, loss of productivity, and potential health risks did not align with my personal values or long-term goals. I concluded that while I could maintain control and awareness during intoxication, the overall experience was not beneficial to my well-being or academic pursuits. This experiment reinforced my preference for alternative forms of social engagement that do not compromise my physical health or mental clarity.</p>
-        </div>
+        <!-- Section 8: Reflective Conclusion -->
+        <section id="conclusion" class="view-section">
+            <div class="content-wrapper">
+                <div class="section-meta">
+                    <span class="section-number">08</span>
+                    <div class="line"></div>
+                </div>
+                <h2>Reflective Conclusion</h2>
+                <div class="content-body">
+                    <p>Following this experience, I asked myself why such activities are socially normalized, particularly in academic and professional settings. Many individuals engage in drinking as a form of socialization, stress relief, or bonding. However, I found that the physical discomfort, loss of productivity, and potential health risks did not align with my personal values or long-term goals. I concluded that while I could maintain control and awareness during intoxication, the overall experience was not beneficial to my well-being or academic pursuits. This experiment reinforced my preference for alternative forms of social engagement that do not compromise my physical health or mental clarity.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="view-section footer-section">
+            <div class="content-wrapper">
+                <p>&copy; 2026 Dinno Guerba. Modernized Documentation.</p>
+                <div class="footer-links">
+                    <a href="#view-hero">Back to top</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Navigation dots -->
+    <div class="nav-dots">
+        <a href="#view-hero" class="dot active" data-title="Home"></a>
+        <a href="#intro" class="dot" data-title="Intro"></a>
+        <a href="#baseline" class="dot" data-title="Baseline"></a>
+        <a href="#onset" class="dot" data-title="Onset"></a>
+        <a href="#awareness" class="dot" data-title="Awareness"></a>
+        <a href="#fatigue" class="dot" data-title="Fatigue"></a>
+        <a href="#decline" class="dot" data-title="Decline"></a>
+        <a href="#final" class="dot" data-title="Final"></a>
+        <a href="#conclusion" class="dot" data-title="Conclusion"></a>
     </div>
-
-    <footer>
-        <p>&copy; All rights reserved Dinno Guerba</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
