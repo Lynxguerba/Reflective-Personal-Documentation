@@ -160,7 +160,89 @@ document.addEventListener("DOMContentLoaded", () => {
     target.scrollIntoView();
   }
   initCursor();
+  initParticles();
 });
+
+// Particle System Logic
+function initParticles() {
+  const container = document.getElementById("particle-container");
+  if (!container || !motionLib) return;
+
+  const { animate } = motionLib;
+
+  function createSingleParticle() {
+    const particle = document.createElement("div");
+    particle.className = "particle";
+    
+    const size = Math.random() * 8 + 4;
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    
+    container.appendChild(particle);
+
+    animate(
+      particle,
+      { 
+        opacity: [0, 0.4, 0],
+        y: [0, Math.random() * -100 - 50],
+        x: [0, (Math.random() - 0.5) * 100]
+      },
+      { duration: Math.random() * 10 + 10, easing: "linear" }
+    ).finished.then(() => particle.remove());
+  }
+
+  function createParticleGroup() {
+    const group = document.createElement("div");
+    group.className = "particle-group";
+    
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+    group.style.left = `${x}px`;
+    group.style.top = `${y}px`;
+    
+    // Create particles in a circle
+    const numParticles = 6;
+    const radius = 30;
+    
+    for (let i = 0; i < numParticles; i++) {
+      const p = document.createElement("div");
+      p.className = "group-particle";
+      const angle = (i / numParticles) * Math.PI * 2;
+      p.style.left = `${50 + Math.cos(angle) * radius}px`;
+      p.style.top = `${50 + Math.sin(angle) * radius}px`;
+      group.appendChild(p);
+    }
+    
+    container.appendChild(group);
+
+    animate(
+      group,
+      { 
+        opacity: [0, 0.6, 0],
+        rotate: [0, 180],
+        scale: [0.8, 1.2]
+      },
+      { duration: 15, easing: "ease-in-out" }
+    ).finished.then(() => group.remove());
+  }
+
+  // Spawn loop
+  setInterval(() => {
+    if (document.hidden) return;
+    createSingleParticle();
+    if (Math.random() > 0.7) createParticleGroup();
+  }, 2000);
+
+  // Initial batch
+  for (let i = 0; i < 10; i++) {
+    setTimeout(createSingleParticle, Math.random() * 5000);
+  }
+}
 
 // Custom Cursor Logic
 function initCursor() {
