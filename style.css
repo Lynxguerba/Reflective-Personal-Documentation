@@ -61,8 +61,7 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background-color: var(--bg);
+  z-index: -2;
   background-image: 
     radial-gradient(at 0% 0%, var(--mesh-1) 0px, transparent 50%),
     radial-gradient(at 100% 0%, var(--mesh-2) 0px, transparent 50%),
@@ -71,6 +70,22 @@ h1, h2, h3 {
     radial-gradient(at 50% 50%, var(--mesh-2) 0px, transparent 50%);
   filter: blur(80px);
   opacity: 0.6;
+}
+
+.background-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: 
+    linear-gradient(var(--glass-border) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--glass-border) 1.5px, transparent 1.5px);
+  background-size: 80px 80px;
+  opacity: 0.4;
+  mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 60%);
+  -webkit-mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 60%);
 }
 
 /* Header */

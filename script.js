@@ -175,6 +175,10 @@ function initCursor() {
   window.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
+    
+    // Update CSS variables for background mask tracking
+    document.documentElement.style.setProperty('--mouse-x', `${mouseX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${mouseY}px`);
   });
 
   function animate() {
